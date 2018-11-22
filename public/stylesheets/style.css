@@ -1,0 +1,75 @@
+/* body {
+    padding: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0, 0.5)), url("../images/img01.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-box {
+    background-color: #fff;
+    color: rgb(80, 78, 78);
+    width: 40vh;
+    height: 50vh;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto 20px;
+}
+
+#info-box {
+    width: 60vh;
+    height: 30vh;;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 15px 0px;
+    border: none;
+    border-bottom: 1px solid rgb(184, 181, 181);
+    width: 100%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-bottom: 2px solid rgb(151, 151, 151);
+}
+
+input[type="submit"] {
+    margin: 50px 5px;
+    padding: 5px 5px;
+    width: 150px;
+    border-radius: 25px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+} 
+
+
+#btn1 {
+    background-color: #660242;
+    border: 1px solid #660242;
+    color: white;
+}
+
+#btn1:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #660242;
+}
+
+  
+#btn2 {
+color: white;
+background-color: #0F2A5F;
+border: 1px solid #0F2A5F;
+}
+
+#btn2:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #0F2A5F;
+} */
+

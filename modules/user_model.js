@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt-nodejs');
 
 mongoose.connect('mongodb://localhost/myDb');
 
-// let db = mongoose.connection;
 
 const Schema = mongoose.Schema;
 const UserSchema= new Schema({

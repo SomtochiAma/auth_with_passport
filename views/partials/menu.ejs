@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">MY APP</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+    <%  if(user) { %>
+        <li id="home"><a href="/">DASHBOARD</a></li>
+        <li id="about"><a href="/user/logout">LOGOUT</a></li>
+    <% } else{ %>
+        <li id="contact"><a href="/user/login">LOGIN</a></li>
+        <li id="contact"><a href="/user/signup">SIGN UP</a></li>
+    <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

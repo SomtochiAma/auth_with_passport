@@ -16,10 +16,10 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/signup', (req, res, next) => {
-    var username = req.body.username;
+    /* var username = req.body.username;
     var email = req.body.email;
     var password1 = req.body.password1;
-    var password2 = req.body.password2;
+    var password2 = req.body.password2 */;
 
     
     req.checkBody('username', 'Name is Required').notEmpty();
@@ -55,11 +55,16 @@ router.post('/signup', (req, res, next) => {
                                 email: req.body.email,
                                 password: hash,
                             })
-                            user.save()
-                                .then(function(result) {
+                            user.save(function(err, result) {
+                                if (err) {
+                                    console.log(err);
+                                }
+                                req.flash('success_msg', 'You are registered and can now log in.');
+                                res.redirect('/user/login')
+                            });
+                                /* .then(function(result) {
                                     console.log(result);
                                     req.flash('success_msg', 'You are registered and can now log in.');
-
                                     res.redirect('/user/login')
                                 })
                                 .catch(err => {
@@ -67,7 +72,7 @@ router.post('/signup', (req, res, next) => {
                                     res.status(500).json({
                                         error: err
                                     })
-                                })
+                                }) */
                         }
                     })
                 }
@@ -91,9 +96,11 @@ router.post('/signup', (req, res, next) => {
                 })
             }
         }) */
-
-        req.flash('success_msg', 'You are registered and can now log in');
-        res.redirect('/user/login');
+        .catch((err) => {
+            console.log(err)
+            req.flash('success_msg', 'You are already registered and can now log in');
+            res.redirect('/user/login');
+        })
     } 
 })
 
